@@ -5,10 +5,13 @@ from django.http import HttpResponseRedirect
 from .forms import SearchForm
 
 def search(request):
-    if 'tag' in request.GET and request.GET['tag']!='':
-        return HttpResponseRedirect('/search/')
+    if request.GET['tag'] != '':
+        return render(request, 'search_results.html', {'tag': request.GET['tag']})
+        # return HttpResponseRedirect('/search/')
+
     else:
         return HttpResponse('You submitted an empty form.')
+
 
 
 
