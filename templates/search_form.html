@@ -1,11 +1,58 @@
-<html>
-<head>
-    <title>Search for your tag!</title>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тег</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+    body {
+    	font-size: 20px;
+    }
+    </style>
 </head>
 <body>
-    <form action="" method="get">
-        <input type="text" name="tag">
-        <input type="submit" value="Find it">
-    </form>
+<nav class="navbar navbar-inverse">
+	  <div class="container">
+	    <div class="navbar-header">
+	    <a class="navbar-brand" href="#">Найди любой тег</a>
+	    </div>
+	    <button type="btn btn-lg">
+	    <img width="45px" height="45px" src="http://icon-icons.com/icons2/602/PNG/512/Vk.com_icon-icons.com_55781.png"/>
+	    </button>
+      </div>
+</nav>
+<div class="container">
+<form action="/search/" method="GET">
+<div class="form-group">
+<label>Тег</label>
+<input type="text" name="tag" placeholder="#тег"/>
+</div>
+<div class="form-group">
+<label>Начальная дата</label>
+<input type="date" name="start_date"/>
+</div>
+<div class="form-group">
+<label>Конечная дата</label>
+<input type="date" name="end_date"/>
+</div>
+<div class="form-group">
+<div class="row">
+<div class="col-md-3">
+<label>Интервал</label>
+<input type="range" min="1" max="24" name="interval"/>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label>Цвет линии графика</label>
+<input type="color" name="color"/><br/>
+</div>
+<button class="btn btn-default btn-lg">Найти</button>
+</form>
+</div>
+</div>
 </body>
 </html>
